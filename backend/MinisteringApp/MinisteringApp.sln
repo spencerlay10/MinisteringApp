@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.12.35527.113 d17.12
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MinisteringApp", "MinisteringApp\MinisteringApp.csproj", "{393F624A-A9DB-4967-8351-9B18E44A65BA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{393F624A-A9DB-4967-8351-9B18E44A65BA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{393F624A-A9DB-4967-8351-9B18E44A65BA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{393F624A-A9DB-4967-8351-9B18E44A65BA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{393F624A-A9DB-4967-8351-9B18E44A65BA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
