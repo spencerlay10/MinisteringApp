@@ -1,3 +1,6 @@
+using Microsoft.EntityFrameworkCore;
+using MinisteringApp.Data;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
@@ -6,6 +9,12 @@ builder.Services.AddControllers();
 // Learn more about configuring Swagger/OpenAPI at https://aka.ms/aspnetcore/swashbuckle
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
+builder.Services.AddDbContext<MinisteringDatabaseContext>(options =>
+{
+    options.UseSqlite(builder.Configuration.GetConnectionString("MinisteringConnection"));
+});
+
+builder.Services.AddScoped<iMinisteringRepository, EFMinisteringRepository>();
 
 var app = builder.Build();
 
