@@ -1,0 +1,18 @@
+.section {
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 15px;
+  padding: 12px 13px;
+}
+
+.sectionTitle {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+@media (width<=640px) {
+  .sectionTitle {
+    font-size: 20px;
+  }
+}
