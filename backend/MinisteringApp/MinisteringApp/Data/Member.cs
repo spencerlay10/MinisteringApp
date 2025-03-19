@@ -1,11 +1,13 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MinisteringApp.Data;
 
 public partial class Member
 {
-    public int MembershipRecordNumber { get; set; }
+    [Key]
+    public string MembershipRecordNumber { get; set; }
 
     public string FirstName { get; set; } = null!;
 
