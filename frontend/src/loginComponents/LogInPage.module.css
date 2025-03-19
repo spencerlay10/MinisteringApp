@@ -1,0 +1,106 @@
+.logInPage {
+  background-color: #f5f5f5;
+  flex-direction: column;
+  align-items: stretch;
+  width: 100%;
+  max-width: 480px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 112px 37px;
+  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  display: flex;
+}
+.img {
+  aspect-ratio: 2.53;
+  object-fit: contain;
+  object-position: center;
+  align-self: center;
+  width: 250px;
+  max-width: 100%;
+}
+.formLogIn {
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  width: 100%;
+  min-width: 320px;
+  margin-top: 64px;
+  padding: 24px;
+}
+.inputField {
+  white-space: nowrap;
+  width: 100%;
+}
+.label {
+  color: #1e1e1e;
+  line-height: 1.4;
+}
+.input {
+  color: #b3b3b3;
+  background-color: #fff;
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  flex: 1;
+  align-self: stretch;
+  width: 100%;
+  min-width: 240px;
+  margin-top: 8px;
+  padding: 12px 16px;
+  line-height: 1;
+  overflow: hidden;
+}
+.inputField2 {
+  white-space: nowrap;
+  width: 100%;
+  margin-top: 24px;
+}
+.buttonGroup {
+  color: #f5f5f5;
+  background-color: #fff;
+  justify-content: start;
+  align-items: center;
+  gap: 16px;
+  width: 100%;
+  margin-top: 24px;
+  line-height: 1;
+  display: flex;
+}
+.button {
+  background-color: #48657d;
+  border: 1px solid #2c2c2c;
+  border-radius: 8px;
+  flex: 1;
+  align-self: stretch;
+  gap: 8px;
+  width: 100%;
+  min-width: 240px;
+  margin-top: auto;
+  margin-bottom: auto;
+  padding: 12px;
+  overflow: hidden;
+  color: #f5f5f5;
+  cursor: pointer;
+  text-align: center;
+  font-family: inherit;
+  font-size: inherit;
+}
+.forgotPassword {
+  text-decoration-skip-ink: none;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+  color: #0481ea;
+  width: 100%;
+  margin-top: 24px;
+  line-height: 1.4;
+  text-decoration: underline;
+  cursor: pointer;
+}
+.footer {
+  color: #f5f5f5;
+  align-self: start;
+  margin-top: 281px;
+  margin-left: 18px;
+  line-height: 16px;
+}
