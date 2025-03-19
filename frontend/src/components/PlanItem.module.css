@@ -1,0 +1,53 @@
+.planItem {
+  background-color: #fff;
+  border: 1px solid #dadada;
+  border-radius: 5px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px;
+  display: flex;
+  margin-bottom: 10px;
+}
+
+@media (width<=640px) {
+  .planItem {
+    padding: 6px;
+  }
+}
+
+.planTitle {
+  color: #1e1e1e;
+  width: 207px;
+  font-size: 16px;
+  font-weight: 700;
+  margin: 0;
+}
+
+@media (width<=640px) {
+  .planTitle {
+    font-size: 14px;
+  }
+}
+
+.editButton {
+  width: 24px;
+  height: 24px;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+}
+
+.planDate {
+  color: #1e1e1e;
+  width: 207px;
+  font-size: 16px;
+  margin: 0;
+}
+
+@media (width<=640px) {
+  .planDate {
+    font-size: 14px;
+  }
+}
