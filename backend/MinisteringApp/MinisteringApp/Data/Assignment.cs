@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MinisteringApp.Data;
 
 public partial class Assignment
 {
+    [Key]
     public int AssignmentId { get; set; }
 
-    public int MinisterRecordNumberId { get; set; }
+    public string MinisterRecordNumberId { get; set; }
 
-    public int RecipientMembershipRecordNumber { get; set; }
+    public string RecipientMembershipRecordNumber { get; set; }
 
     public string BeginDate { get; set; } = null!;
 
@@ -18,4 +20,10 @@ public partial class Assignment
     public virtual Member MinisterRecordNumber { get; set; } = null!;
 
     public virtual Member RecipientMembershipRecordNumberNavigation { get; set; } = null!;
+    
+    public virtual Plan? Plan { get; set; }
+    public virtual Member? Companion { get; set; }
+
+    
+    
 }

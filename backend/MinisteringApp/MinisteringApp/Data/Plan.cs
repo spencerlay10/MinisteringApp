@@ -1,13 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MinisteringApp.Data;
 
 public partial class Plan
 {
+    [Key]
     public int PlanId { get; set; }
 
-    public int MembershipRecordNumber { get; set; }
+    public string MembershipRecordNumber { get; set; }
 
     public string Title { get; set; } = null!;
 

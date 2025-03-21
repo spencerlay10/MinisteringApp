@@ -1,0 +1,27 @@
+.container {
+  background-color: #f5f5f5;
+  width: 100%;
+  max-width: 393px;
+  height: 852px;
+  font-family: Geologica, sans-serif;
+  position: relative;
+}
+
+@media (width<=991px) {
+  .container {
+    max-width: 100%;
+  }
+}
+
+.mainContent {
+  flex-direction: column;
+  gap: 34px;
+  padding: 20px;
+  display: flex;
+}
+
+@media (width<=640px) {
+  .mainContent {
+    padding: 10px;
+  }
+}

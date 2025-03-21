@@ -1,0 +1,21 @@
+.section {
+  margin-top: 20px;
+}
+
+.sectionTitle {
+  margin-bottom: 12px;
+  font-size: 24px;
+  font-weight: normal;
+}
+
+@media (width<=640px) {
+  .sectionTitle {
+    font-size: 20px;
+  }
+}
+
+.plansList {
+  flex-direction: column;
+  gap: 10px;
+  display: flex;
+}

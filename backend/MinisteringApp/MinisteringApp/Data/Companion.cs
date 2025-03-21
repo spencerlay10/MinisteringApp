@@ -1,15 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace MinisteringApp.Data;
 
 public partial class Companion
 {
+    [Key]
     public int Id { get; set; }
 
-    public int MinisterRecordNumber { get; set; }
+    public string MinisterRecordNumber { get; set; }
 
-    public int CompanionMembershipRecordNumber { get; set; }
+    public string CompanionMembershipRecordNumber { get; set; }
 
     public string BeginDate { get; set; } = null!;
 

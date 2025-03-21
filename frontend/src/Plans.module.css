@@ -1,0 +1,165 @@
+.container {
+  margin: 0 auto;
+  max-width: 480px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #F5F5F5;
+  position: relative;
+}
+
+.spacer {
+  width: 124px;
+  height: 10px;
+}
+
+.levels {
+  flex: 1;
+  display: flex;
+  padding-left: 6px;
+  padding-right: 16px;
+  align-items: center;
+  gap: 7px;
+  justify-content: center;
+}
+
+.levelIcon {
+  width: 19px;
+  height: auto;
+  object-fit: contain;
+}
+
+.mainContent {
+  display: flex;
+  margin-top: 36px;
+  width: 100%;
+  padding-left: 23px;
+  padding-right: 23px;
+  flex-direction: column;
+  align-items: center;
+}
+
+.description {
+  color: #000;
+  text-align: center;
+  font-family:
+    Geologica,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  align-self: stretch;
+}
+
+.recipientLabel {
+  margin-top: 46px;
+  width: 100%;
+  max-width: 308px;
+  font-family:
+    Geologica,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 16px;
+  color: #1e1e1e;
+  font-weight: 400;
+}
+
+.selectContainer {
+  display: flex;
+  margin-top: 13px;
+  width: 100%;
+  max-width: 308px;
+  align-items: center;
+  gap: 8px;
+}
+
+.selectInput {
+  flex: 1;
+  border-radius: 8px;
+  border: 1px solid #d9d9d9;
+  padding: 12px 16px;
+  font-family: Geologica, -apple-system, Roboto, Helvetica, sans-serif;
+  font-size: 16px;
+  color: #1e1e1e;
+  background-color: white;
+  cursor: pointer;
+}
+
+.selectInput::-ms-expand {
+  display: none;
+}
+
+.selectInput:focus {
+  outline: none;
+  border-color: #007bff;
+}
+
+.plansTitle {
+  color: #000;
+  font-family:
+    Geologica,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
+  font-size: 24px;
+  font-weight: 400;
+  margin-top: 44px;
+  margin-left: 27px;
+  align-self: flex-start;
+}
+
+.plansList {
+  width: 100%;
+  max-width: 295px;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  margin-top: 10px;
+}
+
+.viewPastPlans {
+  margin-top: 11px;
+  width: 100%;
+  padding: 0 55px;
+}
+
+.floatingButton {
+  position: absolute;
+  bottom: 70px;
+  right: 20px;
+  width: 50px;
+  height: 55px;
+  background-color: #48657d;
+  color: white;
+  padding-top: 10px;
+  border: none;
+  border-radius: 50%;
+  font-size: 24px;
+  font-weight: bold;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  transition: background-color 0.2s ease-in-out;
+}
+
+.floatingButton:hover {
+  background-color: #304353;
+}
+
+@media (max-width: 640px) {
+  .headerTitle {
+    font-size: 20px;
+  }
+
+  .plansTitle {
+    font-size: 20px;
+  }
+}
