@@ -7,7 +7,12 @@
   margin-left: auto;
   margin-right: auto;
   padding: 112px 37px;
-  font-family: Inter, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family:
+    Inter,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   font-size: 16px;
   font-weight: 400;
   display: flex;
@@ -24,14 +29,14 @@
   background-color: #fff;
   border: 1px solid #d9d9d9;
   border-radius: 8px;
-  width: 100%;
+  /* width: 100%; */
   min-width: 320px;
   margin-top: 64px;
   padding: 24px;
 }
 .inputField {
   white-space: nowrap;
-  width: 100%;
+  width: 70%;
 }
 .label {
   color: #1e1e1e;
@@ -53,7 +58,7 @@
 }
 .inputField2 {
   white-space: nowrap;
-  width: 100%;
+  width: 70%;
   margin-top: 24px;
 }
 .buttonGroup {
