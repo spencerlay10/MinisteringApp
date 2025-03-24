@@ -8,31 +8,63 @@
   padding: 10px;
   display: flex;
 }
+
 @media (width<=991px) {
   .navContainer {
     gap: 60px;
   }
 }
+
 @media (width<=640px) {
   .navContainer {
     gap: 40px;
     height: 55px;
   }
 }
+
 .navItem {
   flex-direction: column;
   align-items: center;
   gap: 5px;
   display: flex;
 }
+
+.navItem a {
+  text-decoration: none;
+  color: #48657d;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.navItem a:hover {
+  background-color: #e0e0e0;
+}
+
+.navItem.active a {
+  background-color: #dadada;
+  color: #2a3f4d;
+  font-weight: 500;
+}
+
 .navLabel {
   color: #48657d;
   font-family: Geologica, sans-serif;
   font-size: 13px;
   font-weight: 400;
 }
+
 @media (width<=640px) {
   .navLabel {
     font-size: 11px;
   }
+}
+
+.navList {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-around;
 }

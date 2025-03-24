@@ -1,11 +1,13 @@
 .section {
   margin-top: 20px;
+  color: black;
 }
 
 .sectionTitle {
   margin-bottom: 12px;
   font-size: 24px;
   font-weight: normal;
+  color: #48657d;
 }
 
 @media (width<=640px) {
