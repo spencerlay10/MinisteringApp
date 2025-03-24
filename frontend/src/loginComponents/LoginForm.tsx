@@ -24,10 +24,10 @@ const LoginForm: React.FC<LoginFormProps> = ({ onSubmit }) => {
 
   return (
     <form className={styles.formLogIn} onSubmit={handleSubmit}>
-      <InputField label="Username" value={username} onChange={setUsername} />
+      <InputField label="Username " value={username} onChange={setUsername} />
 
       <InputField
-        label="Password"
+        label="Password "
         value={password}
         onChange={setPassword}
         type="password"
