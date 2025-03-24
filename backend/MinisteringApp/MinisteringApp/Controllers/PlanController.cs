@@ -21,12 +21,10 @@ namespace MinisteringApp.Controllers
 
         // GET: api/Plan/GetAllPlans
         [HttpGet("GetAllPlans")]
-        public IActionResult GetAllPlans(int pageSize, int pageNumber)
+        public IActionResult GetAllPlans()
         {
             var planList = _context.Plans
                 .Include(p => p.PlanRecipients)
-                .Skip((pageNumber - 1) * pageSize)
-                .Take(pageSize)
                 .ToList();
 
             var totalPlans = _context.Plans.Count();
