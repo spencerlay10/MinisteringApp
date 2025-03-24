@@ -221,6 +221,25 @@
   gap: 0.25rem;
   display: flex;
 }
+
+.navItem a {
+  text-decoration: none;
+  color: #48657d;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.navItem a:hover {
+  background-color: #e0e0e0;
+}
+
+.navItem.active a {
+  background-color: #dadada;
+  color: #2a3f4d;
+  font-weight: 500;
+}
+
 .i5 {
   font-size: 1.25rem;
   line-height: 1.75rem;
@@ -243,4 +262,13 @@
 .div33 {
   font-size: 0.75rem;
   line-height: 1rem;
+}
+
+.navList {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-around;
 }

@@ -1,24 +1,57 @@
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import styles from './CompanionSection.module.css';
 import ProfileItem from './ProfileItem';
+import {Companion} from '../types/companion';
 
 const CompanionSection: React.FC = () => {
+  const [companions, setCompanions] = useState<Companion[]>([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    // Replace with your actual API endpoint
+    fetch('https://localhost:5001/api/companions')
+      .then((response) => response.json())
+      .then((data) => {
+        const extractedCompanions: Companion[] = data.map((companion: any) => ({
+          id: companion.id,
+          name: companion.name,
+          email: companion.email,
+          phone: companion.phone || undefined,
+          imageUrl: companion.imageUrl?.trim() !== '' 
+            ? companion.imageUrl 
+            : 'https://via.placeholder.com/150' // Default image if none provided
+        }));
+        setCompanions(extractedCompanions);
+        setLoading(false);
+      })
+      .catch((error) => {
+        console.error('Error fetching companions:', error);
+        setLoading(false);
+      });
+  }, []);
+
   return (
     <section className={styles.section}>
       <h2 className={styles.sectionTitle}>Companion(s):</h2>
-      <div>
-        <ProfileItem
-          imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/21f601207d9e9c502038460f2701769a482a82b3"
-          name="Steve Young"
-          email="young.steve@gmail.com"
-        />
-        <ProfileItem
-          imageUrl="https://cdn.builder.io/api/v1/image/assets/TEMP/8a19f766726294eaec8e8b8d25a3348559696c72"
-          name="Thomas Richardson"
-          email="BrotherT@gmail.com"
-          phone="555-236-4679"
-        />
-      </div>
+      {loading ? (
+        <p>Loading companions...</p>
+      ) : (
+        <div>
+          {companions.length > 0 ? (
+            companions.map((companion) => (
+              <ProfileItem
+                key={companion.id}
+                imageUrl={companion.imageUrl}
+                name={companion.name}
+                email={companion.email}
+                phone={companion.phone}
+              />
+            ))
+          ) : (
+            <p>No companions available.</p>
+          )}
+        </div>
+      )}
     </section>
   );
 };
