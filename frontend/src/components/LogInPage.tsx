@@ -4,11 +4,24 @@ import React from 'react';
 import styles from './LogInPage.module.css';
 import LoginForm from './LoginForm';
 
+const users = [
+  { username: 'rex', password: 'password123' },
+  { username: 'admin', password: 'admin123' },
+  { username: 'user', password: 'userpass' }
+];
+
 function LogInPage() {
   const handleLogin = (username: string, password: string) => {
     // Handle login logic here
-    console.log('Login attempt:', { username, password });
-    // In a real application, you would call an authentication service here
+    const user = users.find(u => u.username === username && u.password === password);
+
+    if (user) {
+      localStorage.setItem('authenticatedUser', username); // Store login info
+      alert('Login successful!');
+      window.location.href = '/dashboard'; // Redirect (modify as needed)
+    } else {
+      alert('Invalid username or password');
+    }
   };
 
   return (
