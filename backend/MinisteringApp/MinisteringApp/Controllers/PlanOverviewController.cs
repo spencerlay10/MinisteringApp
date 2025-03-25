@@ -34,14 +34,32 @@ namespace MinisteringApp.Controllers
                     (a, m) => new
                     {
                         AssignmentId = a.AssignmentId,
-                        RecipientName = m.FirstName + " " + m.LastName
+                        RecipientName = m.FirstName + " " + m.LastName,
+                        PhoneNumber = m.PhoneNumber,
+                        Email = m.Email,
+                    }
+                ).ToList();
+
+            var companions = _context.Companions
+                .Where(a => a.CompanionMembershipRecordNumber == memberId)
+                .Join(
+                    _context.Members,
+                    a => a.CompanionMembershipRecordNumber,
+                    m => m.MembershipRecordNumber,
+                    (a, m) => new
+                    {
+                        CompanionId = a.CompanionMembershipRecordNumber,
+                        RecipientName = m.FirstName + " " + m.LastName,
+                        CompPhoneNumber = m.PhoneNumber,
+                        CompEmail = m.Email,
                     }
                 ).ToList();
 
             return Ok(new
             {
                 Plans = currentPlanList,
-                Assignments = assignments
+                Assignments = assignments,
+                Companions = companions,
             });
 
         }
@@ -50,7 +68,7 @@ namespace MinisteringApp.Controllers
 
         public IEnumerable<Plan> GetPast()
         {
-            var memberId = "3124247758";
+            var memberId = "124247758";
             var pastPlanList = _context.Plans
                 .Where(x => x.MembershipRecordNumber == memberId & x.Status == "past").ToList();
 
