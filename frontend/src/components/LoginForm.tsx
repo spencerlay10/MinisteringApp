@@ -2,7 +2,7 @@
 
 import React, { FormEvent, useState } from 'react';
 import styles from './LogInPage.module.css';
-import InputField from './InputField';
+import InputField from '../components/InputField';
 
 interface LoginFormProps {
   onSubmit: (username: string, password: string) => void;
