@@ -21,9 +21,9 @@ namespace MinisteringApp.Controllers
         public IActionResult Get()
         {
 
-            var memberId = "3124247758";
+            var memberId = "5235781577";
             var currentPlanList = _context.Plans
-                .Where(x => x.MembershipRecordNumber == memberId & x.Status == "current").ToList();
+                .Where(x => x.MembershipRecordNumber == memberId && x.Status == "current").ToList();
 
             var assignments = _context.Assignments
                 .Where(a => a.MinisterRecordNumberId == memberId)
@@ -68,9 +68,9 @@ namespace MinisteringApp.Controllers
 
         public IEnumerable<Plan> GetPast()
         {
-            var memberId = "124247758";
+            var memberId = "5235781577";
             var pastPlanList = _context.Plans
-                .Where(x => x.MembershipRecordNumber == memberId & x.Status == "past").ToList();
+                .Where(x => x.MembershipRecordNumber == memberId && x.Status == "past").ToList();
 
             return (pastPlanList);
         }
