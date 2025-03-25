@@ -20,10 +20,4 @@ public partial class Assignment
     public virtual Member MinisterRecordNumber { get; set; } = null!;
 
     public virtual Member RecipientMembershipRecordNumberNavigation { get; set; } = null!;
-
-    public virtual Plan? Plan { get; set; }
-    public virtual Member? Companion { get; set; }
-
-
-
 }

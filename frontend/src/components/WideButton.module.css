@@ -1,0 +1,21 @@
+.wideButton {
+    width: 100%;
+    min-height: 34px;
+    padding: 2px 12px;
+    font-family:
+      Geologica,
+      -apple-system,
+      Roboto,
+      Helvetica,
+      sans-serif;
+    font-size: 24px;
+    color: white;
+    background:  #48657d;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+.wideButton:hover {
+    background-color: #304353;
+    color: #f5f5f5;
+}

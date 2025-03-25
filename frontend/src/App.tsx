@@ -15,6 +15,7 @@ import CompanionSection from './components/CompanionSection';
 import PlansSection from './components/PlansSection';
 import Header from './components/Header';
 import BottomNavigation from './components/BottomNavigation';
+import LogInPage from './loginComponents/LogInPage';
 // Import other components as needed
 
 function App() {
@@ -24,6 +25,7 @@ function App() {
         <Header title={''} /> {/* If you have a header component */}
         {/* <NavBar /> */}
         <Routes>
+          <Route path="/login" element={<LogInPage />} />
           <Route path="/" element={<HomeScreen />} />
           <Route path="/assignments" element={<AssignmentSection />} />
           <Route path="/companions" element={<CompanionSection />} />

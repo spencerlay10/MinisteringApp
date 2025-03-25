@@ -9,7 +9,7 @@ const CompanionSection: React.FC = () => {
 
   useEffect(() => {
     // Replace with your actual API endpoint
-    fetch('https://localhost:5000/api/landing')
+    fetch('https://localhost:5000/api/companions')
       .then((response) => response.json())
       .then((data) => {
         const extractedCompanions: Companion[] = data.map((companion: any) => ({

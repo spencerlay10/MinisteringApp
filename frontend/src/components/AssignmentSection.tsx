@@ -8,7 +8,7 @@ const AssignmentSection: React.FC = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetch('https://localhost:5001/api/landing') // Adjust API URL as needed
+    fetch('https://localhost:5000/api/landing') // Adjust API URL as needed
       .then((response) => response.json())
       .then((data) => {
         const extractedAssignments: Assignment[] = data.map((assignment: any) => ({
