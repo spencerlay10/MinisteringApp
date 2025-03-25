@@ -1,13 +1,12 @@
 export interface Plan {
-    plan_id: number;
-    membership_record_number: number;
-    title: string;
-    target_date: string;
+    customMessage: string;
     description: string;
+    membershipRecordNumber: string;
     notifications: number;
-    reminder_date_time: string;
-    reminder_type: string;
-    repeat_frequency: string;
-    status: string;
-    custom_message: string;
+    planId: number;
+    reminderDateTime: string;
+    reminderType: string;
+    repeatFrequency: string;
+    targetDate: string;
+    title: string;
 }

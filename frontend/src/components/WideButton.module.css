@@ -1,5 +1,5 @@
 .wideButton {
-    width: 100%;
+    width: 95%;
     min-height: 34px;
     padding: 2px 12px;
     font-family:
@@ -13,6 +13,8 @@
     background:  #48657d;
     cursor: pointer;
     transition: background-color 0.2s;
+    border-radius: 8px;
+    justify-self: center;
   }
   
 .wideButton:hover {

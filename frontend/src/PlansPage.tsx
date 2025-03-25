@@ -5,6 +5,7 @@ import WideButton from './components/WideButton';
 import { Plan } from './Plan';
 import StatusBar from './components/StatusBar';
 import Header from './components/Header';
+import { useNavigate } from 'react-router-dom';
 
 // Temporary list of recipients
 const recipients = [
@@ -15,30 +16,22 @@ const recipients = [
     "Sarah Davis"
 ];
 
-// Temporary list of plans
-const current_plans = [
-    "Bake Cookies!",
-    "Fun at the Park",
-    "Craft Night"
-];
-
-// // Pull plans from the API
-// const [current_plans, setPlans] = useState<Plan[]>([]);
-
-//     useEffect(() => {
-//         const fetchPlans = async () => {
-//             const response = await fetch(`https://localhost:5000/api/Books/AllBooks?pageSize=${pageSize}&pageNum=${pageNum}&sortOrder=${sortOrder}`);
-//             const data = await response.json();
-//             setPlans(data);
-//         };
-
-//     fetchPlans();
-
-//     }, []);
-
-// Main Content
 const PlansMain: React.FC = () => {
-    const [selectedRecipient, setSelectedRecipient] = useState("");
+  
+  // const navigate = useNavigate();
+  const [selectedRecipient, setSelectedRecipient] = useState("");
+  const [current_plans, setPlans] = useState<Plan[]>([]);
+
+  useEffect(() => {
+    const fetchPlans = async () => {
+      const response = await fetch(`https://localhost:5000/api/PlanOverview/GetAllPlans`);
+      const data = await response.json();
+      console.log(data.plans);
+      setPlans(data.plans);
+    };
+
+    fetchPlans();
+  }, []);
 
   return (
     <div className={styles.container}>
@@ -69,11 +62,15 @@ const PlansMain: React.FC = () => {
 
         {/* List of Current Plans */}
         <h2 className={styles.plansTitle}>Current Plans:</h2>
-        {current_plans.map((p) => (
-            <div className={styles.plansList}>
-                <PlanCard title={p} targetDate="04/11/2025" />
+        {current_plans.length === 0 ? (
+          <p className={styles.description}>No current plans.</p>
+        ) : (
+          current_plans.map((p, index) => (
+            <div className={styles.plansList} key={index}>
+              <PlanCard title={p.title} targetDate={p.targetDate} />
             </div>
-        ))}
+          ))
+        )}
         
 
         {/* Button to view past plans */}
@@ -95,7 +92,7 @@ function PlansPage() {
     return (
       <>
           <StatusBar />
-          <Header title={'Plans'} />
+          <Header />
           <PlansMain />
       </>
     );

@@ -7,6 +7,7 @@
   align-items: center;
   background-color: #F5F5F5;
   position: relative;
+  min-height: 1000px;
 }
 
 .spacer {
@@ -134,10 +135,10 @@
   bottom: 70px;
   right: 20px;
   width: 50px;
-  height: 55px;
+  height: 50px;
   background-color: #48657d;
   color: white;
-  padding-top: 10px;
+  padding-top: 5px;
   border: none;
   border-radius: 50%;
   font-size: 24px;
