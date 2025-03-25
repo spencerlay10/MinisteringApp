@@ -1,4 +1,3 @@
-'use client';
 import React from 'react';
 import styles from './InputDesign.module.css';
 
@@ -9,9 +8,9 @@ interface NavItemProps {
 
 const NavItem: React.FC<NavItemProps> = ({ icon, label }) => {
   return (
-    <div className={styles.navItem}>
-      <div dangerouslySetInnerHTML={{ __html: icon }} />
-      <span className={styles.navLabel}>{label}</span>
+    <div className={styles.div28}>
+      <i className={icon} />
+      <div className={styles.div29}>{label}</div>
     </div>
   );
 };
