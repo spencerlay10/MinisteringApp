@@ -1,5 +1,4 @@
 'use client';
-import React from 'react';
 import styles from './InputDesign.module.css';
 import NavItem from './NavItem';
 

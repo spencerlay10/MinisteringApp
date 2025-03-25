@@ -8,6 +8,8 @@ import CompanionSection from './CompanionSection';
 import PlansSection from './PlansSection';
 import BottomNavigation from './BottomNavigation';
 
+// this is the main tsx page being used to navigate in the Landing Page
+
 const HomeScreen: React.FC = () => {
   return (
     <div className={styles.container}>

@@ -17,3 +17,4 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label }) => {
 };
 
 export default NavItem;
+// need to update this for links on homepage

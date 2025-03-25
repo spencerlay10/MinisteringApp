@@ -13,7 +13,7 @@ const AssignmentSection: React.FC = () => {
       .then((data) => {
         const extractedAssignments: Assignment[] = data.map((assignment: any) => ({
           id: assignment.id,
-          minister: assignment.Minister, // Adjust based on API response
+          name: assignment.name, // Adjust based on API response
           email: assignment.Recipient,  // Adjust based on API response
           phone: assignment.phone || 'N/A', // Default value if no phone
                   // Improved fallback for imageUrl

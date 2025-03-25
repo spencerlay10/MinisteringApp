@@ -22,7 +22,7 @@ function App() {
     <Router>
       <div className="app">
         <Header title={''} /> {/* If you have a header component */}
-        <NavBar />
+        {/* <NavBar /> */}
         <Routes>
           <Route path="/" element={<HomeScreen />} />
           <Route path="/assignments" element={<AssignmentSection />} />
