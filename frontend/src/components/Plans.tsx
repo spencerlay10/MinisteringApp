@@ -7,28 +7,23 @@ import Header from './Header';
 import { useNavigate } from 'react-router-dom';
 import { Plan } from '../types/plan';
 import BottomNavigation from './BottomNavigation';
-
-// Temporary list of recipients
-const recipients = [
-    "John Doe",
-    "Jane Smith",
-    "Emily Johnson",
-    "Michael Brown",
-    "Sarah Davis"
-];
+import { Assignment } from '../types/assignment';
 
 const PlansMain: React.FC = () => {
-  
   const navigate = useNavigate();
-  const [selectedRecipient, setSelectedRecipient] = useState("");
+  const [selectedRecipient, setSelectedRecipient] = useState('');
   const [current_plans, setPlans] = useState<Plan[]>([]);
+  const [assignments, setAssignments] = useState<Assignment[]>([]);
 
   useEffect(() => {
     const fetchPlans = async () => {
-      const response = await fetch(`https://localhost:5000/api/PlanOverview/GetAllPlans`);
+      const response = await fetch(
+        `https://localhost:5000/api/PlanOverview/GetAllPlans`
+      );
       const data = await response.json();
       console.log(data.plans);
       setPlans(data.plans);
+      setAssignments(data.assignments);
     };
 
     fetchPlans();
@@ -36,7 +31,6 @@ const PlansMain: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      
       {/* Description section */}
       <main className={styles.mainContent}>
         <p className={styles.description}>
@@ -52,10 +46,12 @@ const PlansMain: React.FC = () => {
             value={selectedRecipient}
             onChange={(e) => setSelectedRecipient(e.target.value)}
           >
-            <option value="" disabled>Select a recipient</option>
-            {recipients.map((recipient, index) => (
-              <option key={index} value={recipient}>
-                {recipient}
+            <option value="" disabled>
+              Select a recipient
+            </option>
+            {assignments.map((r) => (
+              <option key={r.assignmentId} value={r.recipientName}>
+                {r.recipientName}
               </option>
             ))}
           </select>
@@ -72,7 +68,7 @@ const PlansMain: React.FC = () => {
             </div>
           ))
         )}
-        
+        <br />
 
         {/* Button to view past plans */}
         <div className={styles.viewPastPlans}>
@@ -81,7 +77,10 @@ const PlansMain: React.FC = () => {
       </main>
 
       {/* Floating Plus Button */}
-      <button className={styles.floatingButton} onClick={() => navigate("/addEdit")}>
+      <button
+        className={styles.floatingButton}
+        onClick={() => navigate('/addEdit')}
+      >
         +
       </button>
     </div>
@@ -90,14 +89,14 @@ const PlansMain: React.FC = () => {
 
 // Full Plans page
 function PlansPage() {
-    return (
-      <>
-          <StatusBar />
-          <Header />
-          <PlansMain />
-          <BottomNavigation />
-      </>
-    );
-  }
+  return (
+    <>
+      <StatusBar />
+      <Header />
+      <PlansMain />
+      <BottomNavigation />
+    </>
+  );
+}
 
 export default PlansPage;
