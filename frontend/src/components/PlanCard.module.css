@@ -1,9 +1,9 @@
 .card {
-  border-radius: 5px;
+  border-radius: 20px;
   border: 1px solid #dadada;
   display: flex;
   min-height: 84px;
-  width: 100%;
+  width: 95%;
   padding: 8px;
   justify-content: space-between;
   align-items: center;
