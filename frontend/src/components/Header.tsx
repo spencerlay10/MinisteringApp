@@ -2,6 +2,8 @@
 import * as React from "react";
 import styles from "./InputDesign.module.css";
 
+// this is the main Header page being used to navigate in the Landing Page and other changes
+
 // StatusBar component for the top section
 const StatusBar: React.FC = () => {
   return (
