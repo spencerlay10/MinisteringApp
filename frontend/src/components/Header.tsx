@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './AddEdit.module.css';
+import styles from './Header.module.css';
 
 // this is the main Header page being used to navigate in the Landing Page and other changes
 
@@ -59,7 +59,7 @@ const StatusBar: React.FC = () => {
 };
 
 // NavigationBar component for the bottom section
-const NavigationBar: React.FC = () => {
+const NavigationBar: React.FC<{title: string}> = ({title}) => {
   return (
     <nav className={styles.navigationBar}>
       <button aria-label="Menu">
@@ -78,22 +78,22 @@ const NavigationBar: React.FC = () => {
           />
         </svg>
       </button>
-      <h1 className={styles.navTitle}>Home</h1>
+      <h1 className={styles.navTitle}>{title}</h1>
       <div className={styles.navSpacer} />
     </nav>
   );
 };
 
 // Main InputDesign component
-function InputDesign() {
+function Header({title}: {title:string}) {
   return (
     <main className={styles.container}>
       <section className={styles.contentWrapper}>
         <StatusBar />
       </section>
-      <NavigationBar />
+      <NavigationBar title={title}/>
     </main>
   );
 }
 
-export default InputDesign;
+export default Header;

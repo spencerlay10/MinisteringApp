@@ -91,7 +91,7 @@ const PlansMain: React.FC = () => {
 function PlansPage() {
     return (
       <>
-          <Header/>
+          <Header title="Plans"/>
           <PlansMain />
           <BottomNavigation />
       </>

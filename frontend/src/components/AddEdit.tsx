@@ -13,7 +13,7 @@ function AddEdit() {
         rel="stylesheet"
       />
       <main className={styles.div}>
-        <Header />
+        <Header title="Add/Edit Plan"/>
         <FormSection />
         <BottomNavigation />
       </main>

@@ -16,7 +16,7 @@ const HomeScreen: React.FC = () => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap"
       />
-      <Header />
+      <Header title="Home"/>
       <main className={styles.mainContent}>
         <AssignmentSection />
         <CompanionSection />
