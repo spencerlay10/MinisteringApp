@@ -1,6 +1,6 @@
 "use client";
 import * as React from "react";
-import styles from "./InputDesign.module.css";
+import styles from "./Header.module.css";
 
 // this is the main Header page being used to navigate in the Landing Page and other changes
 
