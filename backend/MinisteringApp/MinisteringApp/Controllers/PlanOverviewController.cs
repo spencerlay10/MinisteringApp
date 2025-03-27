@@ -41,7 +41,7 @@ namespace MinisteringApp.Controllers
                 ).ToList();
 
             var companions = _context.Companions
-                .Where(a => a.CompanionMembershipRecordNumber == memberId)
+                .Where(a => a.MinisterRecordNumber == memberId)
                 .Join(
                     _context.Members,
                     a => a.CompanionMembershipRecordNumber,
@@ -49,7 +49,7 @@ namespace MinisteringApp.Controllers
                     (a, m) => new
                     {
                         CompanionId = a.CompanionMembershipRecordNumber,
-                        RecipientName = m.FirstName + " " + m.LastName,
+                        CompanionName = m.FirstName + " " + m.LastName,
                         CompPhoneNumber = m.PhoneNumber,
                         CompEmail = m.Email,
                     }
