@@ -18,7 +18,7 @@ function LogInPage() {
     if (user) {
       localStorage.setItem('authenticatedUser', username); // Store login info
       alert('Login successful!');
-      window.location.href = '/dashboard'; // Redirect (modify as needed)
+      window.location.href = '/'; // Redirect (modify as needed)
     } else {
       alert('Invalid username or password');
     }
