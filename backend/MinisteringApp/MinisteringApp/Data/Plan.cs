@@ -29,7 +29,7 @@ public partial class Plan
 
     public string? CustomMessage { get; set; }
 
-    public virtual Member MembershipRecordNumberNavigation { get; set; } = null!;
+    public virtual Member? MembershipRecordNumberNavigation { get; set; } = null!;
 
     public virtual ICollection<PlanRecipient> PlanRecipients { get; set; } = new List<PlanRecipient>();
 
