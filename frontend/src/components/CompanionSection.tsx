@@ -5,53 +5,35 @@ import {Companion} from '../types/companion';
 
 const CompanionSection: React.FC = () => {
   const [companions, setCompanions] = useState<Companion[]>([]);
-  const [loading, setLoading] = useState(true);
 
-  useEffect(() => {
-    // Replace with your actual API endpoint
-    fetch('https://localhost:5000/api/companions')
-      .then((response) => response.json())
-      .then((data) => {
-        const extractedCompanions: Companion[] = data.map((companion: any) => ({
-          id: companion.id,
-          name: companion.name,
-          email: companion.email,
-          phone: companion.phone || undefined,
-          imageUrl: companion.imageUrl?.trim() !== '' 
-            ? companion.imageUrl 
-            : 'https://via.placeholder.com/150' // Default image if none provided
-        }));
-        setCompanions(extractedCompanions);
-        setLoading(false);
-      })
-      .catch((error) => {
-        console.error('Error fetching companions:', error);
-        setLoading(false);
-      });
+      useEffect(() => {
+        const fetchCompanions = async () => {
+          const response = await fetch(`https://localhost:5000/api/PlanOverview/GetAllPlans`);
+          const data = await response.json();
+          setCompanions(data.companions);
+        };
+  
+        fetchCompanions();
   }, []);
 
   return (
     <section className={styles.section}>
-      <h2 className={styles.sectionTitle}>Companion(s):</h2>
-      {loading ? (
-        <p>Loading companions...</p>
-      ) : (
+      <h2 className={styles.sectionTitle}>Companions:</h2>
         <div>
           {companions.length > 0 ? (
             companions.map((companion) => (
               <ProfileItem
-                key={companion.id}
-                imageUrl={companion.imageUrl}
-                name={companion.name}
-                email={companion.email}
-                phone={companion.phone}
+                key={companion.companionId}
+                imageUrl= ""
+                name={companion.companionName}
+                email={companion.compEmail}
+                phone={companion.compPhoneNumber}
               />
             ))
           ) : (
             <p>No companions available.</p>
           )}
         </div>
-      )}
     </section>
   );
 };

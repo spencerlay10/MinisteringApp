@@ -1,7 +1,6 @@
 export interface Assignment {
-  id: number;
-  minister: string;
+  assignmentId: string;
+  recipientName: string;
   email: string;
-  phone?: string;
-  imageUrl?: string;
+  phoneNumber?: string;
 }
