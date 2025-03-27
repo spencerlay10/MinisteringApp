@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react';
 import styles from './Plans.module.css';
 import PlanCard from './PlanCard';
 import WideButton from './WideButton';
-import StatusBar from './StatusBar';
 import Header from './Header';
 import { useNavigate } from 'react-router-dom';
 import { Plan } from '../types/plan';
@@ -92,8 +91,7 @@ const PlansMain: React.FC = () => {
 function PlansPage() {
     return (
       <>
-          <StatusBar />
-          <Header />
+          <Header/>
           <PlansMain />
           <BottomNavigation />
       </>
