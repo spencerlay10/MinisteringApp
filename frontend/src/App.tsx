@@ -2,7 +2,7 @@ import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HomeScreen from './components/HomeScreen';
 
 import LogInPage from './components/LogInPage';
-import InputDesign from './components/InputDesign';
+import InputDesign from './components/AddEdit';
 import PlansPage from './components/Plans';
 import './App.css';
 

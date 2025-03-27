@@ -1,11 +1,11 @@
 'use client';
 import React from 'react';
-import styles from './InputDesign.module.css';
+import styles from './AddEdit.module.css';
 import Header from './Header';
 import FormSection from './FormSection';
 import BottomNavigation from './BottomNavigation';
 
-function InputDesign() {
+function AddEdit() {
   return (
     <>
       <link
@@ -21,4 +21,4 @@ function InputDesign() {
   );
 }
 
-export default InputDesign;
+export default AddEdit;

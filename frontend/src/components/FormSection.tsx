@@ -1,6 +1,6 @@
 'use client';
 import React, { useState } from 'react';
-import styles from './InputDesign.module.css';
+import styles from './AddEdit.module.css';
 import TextInputField from './TextInputField';
 import TextareaField from './TextareaField';
 import CheckboxField from './CheckboxField';

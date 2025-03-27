@@ -1,6 +1,6 @@
 'use client';
 import React from 'react';
-import styles from './InputDesign.module.css';
+import styles from './AddEdit.module.css';
 
 interface CheckboxFieldProps {
   label: string;
