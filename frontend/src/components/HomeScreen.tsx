@@ -1,8 +1,7 @@
 'use client';
 import React from 'react';
 import styles from './HomeScreen.module.css';
-import StatusBar from './StatusBar';
-import Header from './Header';
+import InputDesign from './InputDesign';
 import AssignmentSection from './AssignmentSection';
 import CompanionSection from './CompanionSection';
 import PlansSection from './PlansSection';
@@ -17,8 +16,7 @@ const HomeScreen: React.FC = () => {
         rel="stylesheet"
         href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap"
       />
-      <StatusBar />
-      <Header title="Home" />
+      <InputDesign />
       <main className={styles.mainContent}>
         <AssignmentSection />
         <CompanionSection />
