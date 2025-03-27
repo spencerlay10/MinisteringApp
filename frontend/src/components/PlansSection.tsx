@@ -16,38 +16,6 @@ const PlansSection: React.FC = () => {
       setPlans(data.plans);
     };
 
-
-  // // State to store plans fetched from the database
-  // const [plans, setPlans] = useState<Plan[]>([]);
-  // // State to track loading status
-  // const [isLoading, setIsLoading] = useState<boolean>(true);
-  // // State to handle any errors
-  // const [error, setError] = useState<string | null>(null);
-
-  // useEffect(() => {
-  //   // Function to fetch plans from your database
-  //   const fetchPlans = async () => {
-  //     setIsLoading(true);
-  //     try {
-  //       // Replace with your actual API endpoint
-  //       const response = await fetch('/api/plans');
-        
-  //       if (!response.ok) {
-  //         throw new Error(`Error: ${response.status}`);
-  //       }
-        
-  //       const data = await response.json();
-  //       setPlans(data);
-  //       setError(null);
-  //     } catch (err) {
-  //       console.error('Failed to fetch plans:', err);
-  //       setError('Failed to load plans. Please try again later.');
-  //       // You could set some fallback data here if needed
-  //     } finally {
-  //       setIsLoading(false);
-  //     }
-  //   };
-
     fetchPlans();
   }, []); // Empty dependency array means this effect runs once on mount
 

@@ -2,6 +2,14 @@ import React, { useEffect, useState } from 'react';
 import styles from './CompanionSection.module.css';
 import ProfileItem from './ProfileItem';
 import {Companion} from '../types/companion';
+import Carol from './Carol_Photo.png';
+import Heidi from './Heidi_Photo.png';
+
+// Map names to images
+const imageMap: {[key: string]: string} = {
+  'Carol Smith': Carol,
+  'Heidi Blankenship': Heidi,
+};
 
 const CompanionSection: React.FC = () => {
   const [companions, setCompanions] = useState<Companion[]>([]);
@@ -24,7 +32,7 @@ const CompanionSection: React.FC = () => {
             companions.map((companion) => (
               <ProfileItem
                 key={companion.companionId}
-                imageUrl= ""
+                imageUrl= {imageMap[companion.companionName]}
                 name={companion.companionName}
                 email={companion.compEmail}
                 phone={companion.compPhoneNumber}
