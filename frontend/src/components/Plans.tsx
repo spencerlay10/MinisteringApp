@@ -35,7 +35,10 @@ const PlansMain: React.FC = () => {
 
   return (
     <div className={styles.container}>
-      
+      <link
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap"
+      />
       {/* Description section */}
       <main className={styles.mainContent}>
         <p className={styles.description}>

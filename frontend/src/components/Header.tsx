@@ -79,7 +79,7 @@ const NavigationBar: React.FC = () => {
           />
         </svg>
       </button>
-      <h1 className={styles.navTitle}>Home</h1>
+      <h1 className={styles.navTitle}></h1>
       <div className={styles.navSpacer} />
     </nav>
   );
