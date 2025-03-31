@@ -1,7 +1,4 @@
-import { Key } from "react";
-
 export interface Plan {
-    id: Key | null | undefined;
     customMessage: string;
     description: string;
     membershipRecordNumber: string;
