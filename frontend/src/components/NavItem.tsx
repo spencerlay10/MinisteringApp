@@ -10,7 +10,7 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label }) => {
   return (
     <div className={styles.div28}>
       <i className={icon} />
-      <div className={styles.div29}>{label}</div>
+      <button className={styles.div29}>{label}</button>
     </div>
   );
 };
