@@ -6,6 +6,8 @@ interface TextInputFieldProps {
   placeholder?: string;
   iconClass?: string;
   type?: string;
+  value: string;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }
 
 const TextInputField: React.FC<TextInputFieldProps> = ({
@@ -13,6 +15,8 @@ const TextInputField: React.FC<TextInputFieldProps> = ({
   placeholder,
   iconClass,
   type = 'text',
+  value,
+  onChange,
 }) => {
   return (
     <div className={styles.div4}>
@@ -22,6 +26,8 @@ const TextInputField: React.FC<TextInputFieldProps> = ({
           <input
             type={type}
             placeholder={placeholder}
+            value={value}
+            onChange={onChange}
             className={styles.input}
           />
           <div className={styles.div9}>
@@ -29,7 +35,13 @@ const TextInputField: React.FC<TextInputFieldProps> = ({
           </div>
         </div>
       ) : (
-        <input type={type} placeholder={placeholder} className={styles.input} />
+        <input
+          type={type}
+          placeholder={placeholder}
+          value={value}
+          onChange={onChange}
+          className={styles.input}
+        />
       )}
     </div>
   );
