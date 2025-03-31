@@ -5,7 +5,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #F5F5F5;
+  background-color: #f5f5f5;
   position: relative;
   min-height: 1000px;
 }
@@ -84,7 +84,12 @@
   border-radius: 8px;
   border: 1px solid #d9d9d9;
   padding: 12px 16px;
-  font-family: Geologica, -apple-system, Roboto, Helvetica, sans-serif;
+  font-family:
+    Geologica,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   font-size: 16px;
   color: #1e1e1e;
   background-color: white;
@@ -131,14 +136,13 @@
 }
 
 .floatingButton {
-  position: absolute;
+  position: fixed; /* Ensures it stays fixed on the screen */
   bottom: 70px;
-  right: 20px;
-  width: 50px;
-  height: 50px;
+  right: 150px; /* Moves it slightly away from the right */
+  width: 56px; /* Slightly larger for better balance */
+  height: 56px;
   background-color: #48657d;
   color: white;
-  padding-top: 5px;
   border: none;
   border-radius: 50%;
   font-size: 24px;
@@ -147,12 +151,15 @@
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
-  transition: background-color 0.2s ease-in-out;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+  transition:
+  background-color 0.2s ease-in-out,
+  transform 0.2s ease-in-out;
 }
 
 .floatingButton:hover {
   background-color: #304353;
+  transform: scale(1.1); /* Slight pop effect on hover */
 }
 
 @media (max-width: 640px) {

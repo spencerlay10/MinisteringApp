@@ -1,8 +1,16 @@
-import {Link} from "react-router-dom"
-import styles from './BottomNavigation.module.css'
+import { Link } from 'react-router-dom';
+import styles from './BottomNavigation.module.css';
 
 // NavItem component for each navigation option
-const NavItem = ({ icon, label, to }: { icon: string; label: string; to: string}) => {
+const NavItem = ({
+  icon,
+  label,
+  to,
+}: {
+  icon: string;
+  label: string;
+  to: string;
+}) => {
   return (
     <Link to={to} className={styles.navItem}>
       <div dangerouslySetInnerHTML={{ __html: icon }} />
@@ -35,9 +43,9 @@ function BottomNavigation() {
 
   return (
     <nav className={styles.navContainer}>
-      <NavItem icon={plansIcon} label="Plans" to="/plans"/>
-      <NavItem icon={homeIcon} label="Home" to="/"/>
-      <NavItem icon={reportsIcon} label="Reports" />
+      <NavItem icon={plansIcon} label="Plans" to="/plans" />
+      <NavItem icon={homeIcon} label="Home" to="/" />
+      <NavItem icon={reportsIcon} label="Reports" to="/reports" />
     </nav>
   );
 }

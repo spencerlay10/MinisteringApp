@@ -9,11 +9,11 @@ function AddEdit() {
   return (
     <>
       <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap"
         rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap"
       />
       <main className={styles.div}>
-        <Header title="Add/Edit Plan"/>
+        <Header title="Add/Edit Plan" />
         <FormSection />
         <BottomNavigation />
       </main>

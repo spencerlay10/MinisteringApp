@@ -1,7 +1,15 @@
+/* AddEdit.module.css */
+input,
+textarea {
+  font-family: 'Geologica'; /* Change to your desired font */
+  font-size: 16px; /* Adjust the size if needed */
+  color: #333; /* Adjust the color if needed */
+}
+
 .div {
   min-height: screen;
   background-color: #f8f9fa;
-  font-family: Inter;
+  font-family: Geologica;
 }
 .div2 {
   color: #fff;
