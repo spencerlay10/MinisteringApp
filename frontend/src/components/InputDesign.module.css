@@ -1,0 +1,274 @@
+.div {
+  min-height: screen;
+  background-color: #f8f9fa;
+  font-family: Inter;
+}
+.div2 {
+  color: #fff;
+  background-color: #465b6e;
+  padding: 1rem;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.div3 {
+  flex-direction: column;
+  gap: 1.5rem;
+  padding: 1rem;
+  display: flex;
+}
+.div4 {
+  flex-direction: column;
+  gap: 0.5rem;
+  display: flex;
+}
+.div5 {
+  color: #333;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.input {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+}
+.div6 {
+  flex-direction: column;
+  gap: 0.5rem;
+  display: flex;
+}
+.div7 {
+  color: #333;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.div8 {
+  width: 100%;
+  position: relative;
+}
+.div9 {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+}
+.i {
+  color: #9ca3af;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.div10 {
+  flex-direction: column;
+  gap: 0.5rem;
+  display: flex;
+}
+.div11 {
+  color: #333;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.div12 {
+  width: 100%;
+  position: relative;
+}
+.div13 {
+  position: absolute;
+  top: 50%;
+  right: 0.75rem;
+  transform: translateY(-50%);
+}
+.i2 {
+  color: #9ca3af;
+}
+.div14 {
+  flex-direction: column;
+  gap: 0.5rem;
+  display: flex;
+}
+.div15 {
+  color: #333;
+  font-size: 0.88rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+}
+.textarea {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  width: 100%;
+  min-height: 100px;
+  padding: 0.75rem;
+}
+.div16 {
+  color: #465b6e;
+  align-items: center;
+  gap: 0.5rem;
+  display: flex;
+}
+.i3 {
+  color: orange;
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.div17 {
+  font-size: 0.88rem;
+  line-height: 1.25rem;
+}
+.div18 {
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+}
+.input2 {
+  border-color: #d1d5db;
+  border-radius: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+}
+.div19 {
+  color: #333;
+  font-size: 0.88rem;
+  line-height: 1.25rem;
+}
+.div20 {
+  padding-left: 1.5rem;
+}
+.div21 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 0.88rem;
+  line-height: 1.25rem;
+}
+.div22 {
+  flex-direction: column;
+  gap: 0.5rem;
+  display: flex;
+}
+.div23 {
+  color: #333;
+  margin-bottom: 0.5rem;
+  font-size: 0.88rem;
+  line-height: 1.25rem;
+}
+.select {
+  border: 1px solid #d1d5db;
+  border-radius: 0.5rem;
+  width: 100%;
+  padding: 0.75rem;
+}
+.div24 {
+  align-items: center;
+  gap: 0.5rem;
+  margin-top: 1rem;
+  display: flex;
+}
+.input3 {
+  border-color: #d1d5db;
+  border-radius: 0.25rem;
+  width: 1rem;
+  height: 1rem;
+}
+.div25 {
+  color: #333;
+  font-size: 0.88rem;
+  line-height: 1.25rem;
+}
+.button {
+  color: #fff;
+  background-color: #465b6e;
+  border-radius: 0.5rem;
+  width: 100%;
+  margin-top: 1.5rem;
+  padding-top: 0.75rem;
+  padding-bottom: 0.75rem;
+}
+.div26 {
+  background-color: #fff;
+  border-color: #e5e7eb;
+  border-top-width: 1px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+}
+.div27 {
+  justify-content: space-around;
+  padding: 1rem;
+  display: flex;
+}
+.div28 {
+  color: #465b6e;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  display: flex;
+}
+.i4 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.div29 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.div30 {
+  color: #465b6e;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  display: flex;
+}
+
+.navItem a {
+  text-decoration: none;
+  color: #48657d;
+  padding: 5px 10px;
+  border-radius: 4px;
+  transition: background-color 0.2s;
+}
+
+.navItem a:hover {
+  background-color: #e0e0e0;
+}
+
+.navItem.active a {
+  background-color: #dadada;
+  color: #2a3f4d;
+  font-weight: 500;
+}
+
+.i5 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.div31 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+.div32 {
+  color: #465b6e;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  display: flex;
+}
+.i6 {
+  font-size: 1.25rem;
+  line-height: 1.75rem;
+}
+.div33 {
+  font-size: 0.75rem;
+  line-height: 1rem;
+}
+
+.navList {
+  display: flex;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  justify-content: space-around;
+}

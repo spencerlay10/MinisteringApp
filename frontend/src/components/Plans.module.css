@@ -8,7 +8,6 @@
   background-color: #F5F5F5;
   position: relative;
   min-height: 1000px;
-  font-family: Geologica, sans-serif;
 }
 
 .spacer {
@@ -40,7 +39,6 @@
   padding-right: 23px;
   flex-direction: column;
   align-items: center;
-  font-family: Geologica, sans-serif;
 }
 
 .description {
@@ -104,7 +102,12 @@
 
 .plansTitle {
   color: #000;
-  font-family: Geologica, sans-serif;
+  font-family:
+    Geologica,
+    -apple-system,
+    Roboto,
+    Helvetica,
+    sans-serif;
   font-size: 24px;
   font-weight: 400;
   margin-top: 44px;
@@ -155,11 +158,9 @@
 @media (max-width: 640px) {
   .headerTitle {
     font-size: 20px;
-    font-family: Geologica, sans-serif;
   }
 
   .plansTitle {
     font-size: 20px;
-    font-family: Geologica, sans-serif;
   }
 }

@@ -26,10 +26,6 @@ function LogInPage() {
 
   return (
     <main className={styles.logInPage}>
-        <link
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css2?family=Geologica:wght@400;700&display=swap"
-        />
       <img
         src="https://cdn.builder.io/api/v1/image/assets/TEMP/b97a88c789d645d573305aea21b04d2c89c3bffd502fd4f03beb413f692c1c02?placeholderIfAbsent=true&apiKey=5b4c8780f4d24aaebb509deee63e658c"
         alt="Company Logo"
