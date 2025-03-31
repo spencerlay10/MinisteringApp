@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './InputDesign.module.css';
+import styles from './Header.module.css';
 
 interface NavItemProps {
   icon: string;
@@ -16,3 +16,4 @@ const NavItem: React.FC<NavItemProps> = ({ icon, label }) => {
 };
 
 export default NavItem;
+// need to update this for links on homepage

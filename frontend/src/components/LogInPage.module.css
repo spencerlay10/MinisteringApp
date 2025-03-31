@@ -7,12 +7,7 @@
   margin-left: auto;
   margin-right: auto;
   padding: 112px 37px;
-  font-family:
-    Inter,
-    -apple-system,
-    Roboto,
-    Helvetica,
-    sans-serif;
+  font-family: Geologica, sans-serif;
   font-size: 16px;
   font-weight: 400;
   display: flex;
@@ -33,6 +28,7 @@
   min-width: 320px;
   margin-top: 64px;
   padding: 24px;
+  font-family: Geologica, sans-serif;
 }
 .inputField {
   white-space: nowrap;
@@ -41,6 +37,7 @@
 .label {
   color: #1e1e1e;
   line-height: 1.4;
+  font-family: Geologica, sans-serif;
 }
 .input {
   color: #b3b3b3;
